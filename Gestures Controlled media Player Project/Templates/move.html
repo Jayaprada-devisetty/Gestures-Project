@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<style>
+
+.hero {
+       
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    
+
+}
+.hero::before {    
+      content: "";
+      background-image: url('../static/css/images/gesture.png');
+      background-size: cover;
+      background-repeat: repeat;
+      background-attachment:scroll;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.175;
+}
+h5 {
+  opacity:1;
+  color:black;
+}
+
+</style>
+    <title>Gesture Controlled Media Player</title>
+</head>
+<body >
+<div class="container">
+    <div class="row">
+        <div class="hero">
+            <div class="col-lg-8  offset-lg-2">
+                <h3 class="mt-5"<b><u>Instructions to use:</u></b></h3>
+                <h5 class="mt-5">1.Open the VLC Media Player.<br>
+                                2.Open the video of your choice.<br>
+                                3.[Very Important!!!]<br>The cursor must be placed on the screen of the vlc media player and<br> click on it while showing gestures.<br>
+                                4.Now show the following gestures to perform the functions.<br><br>
+    
+                                <b><u>Gestures to be shown:</u></b><br><br>
+    
+                                Swipe right with one finger-Go forward<br>
+                                Swipe left with two fingers-Go backward<br>
+                                Swipe up with three fingers-Increase volume<br>
+                                Swipe down with four fingers-Decrease volume<br>
+                                Open hand-Play/Pause</h5>
+            </div>
+        </div>    
+    </div>
+</div>
+<div class="hero">
+    <img src="{{ url_for('video_feed') }}" width="100%">
+</div>
+
+</body>
+</html>
